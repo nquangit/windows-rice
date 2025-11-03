@@ -28,10 +28,10 @@
 }
 
 .yasb-bar {
-    padding: 0;
+    padding: 0 0 0 5px;
     margin: 0;
     background-color: var(--crust);
-    border-radius: 8px;
+    border-radius: 17px;
     border: 1px solid #313244;
 }
 
@@ -136,7 +136,7 @@
 }
 
 .widget {
-    padding: 0 10px;
+    padding: 0 15px;
     margin: 0;
 }
 
@@ -167,15 +167,17 @@
 }
 
 .komorebi-workspaces .widget-container {
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    /* border-top-left-radius: 6px; */
+    /* border-bottom-left-radius: 6px; */
+    /* border-radius: 6px; */
     margin-left: 4px;
 }
 
 .komorebi-workspaces {
-    border-top-right-radius: 14px;
-    border-bottom-right-radius: 14px;
-    padding: 0 4px 0 0;
+    /* border-top-right-radius: 14px; */
+    /* border-bottom-right-radius: 14px; */
+    border-radius: 14px;
+    padding: 0 8px 0 2px;
 }
 
 .komorebi-workspaces .offline-status {
@@ -226,7 +228,7 @@
 }
 
 .apps-widget {
-    padding: 0 4px 0 2px;
+    padding: 0 4px 0 10px;
 }
 
 .apps-widget .label {
@@ -404,7 +406,7 @@
 }
 
 .home-widget {
-    padding: 0 4px 0 12px;
+    padding: 0 8px 0 16px;
 }
 
 .home-widget .icon {
