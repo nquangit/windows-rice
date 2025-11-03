@@ -7,7 +7,6 @@
 [![Windows](https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
 [![AutoHotkey](https://img.shields.io/badge/AutoHotkey-v2-334455?style=for-the-badge&logo=autohotkey&logoColor=white)](https://www.autohotkey.com/)
 [![Komorebi](https://img.shields.io/badge/Komorebi-Tiling%20WM-89b4fa?style=for-the-badge)](https://github.com/LGUG2Z/komorebi)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 *Transform your Windows experience with tiling window management, virtual desktop enhancements, and a sleek status bar.*
 
@@ -201,6 +200,7 @@ Edit `multiple-native-desktop/VDSwitch.ahk` to:
 | `Ctrl + Shift + Win + Left/Right` | Cycle through desktops |
 | `Win + Alt + Left/Right` | Move window to adjacent desktop and follow |
 | `Alt + NumpadAdd` | Create new desktop and switch to it |
+| `Win + NumpadAdd` | Create new desktop (without switching) |
 
 ### Application Launchers
 
@@ -307,7 +307,7 @@ Contributions are welcome! Feel free to:
 
 ## 📄 License
 
-This project is licensed under the MIT License - feel free to use and modify as you wish.
+This configuration is provided as-is. Feel free to use and modify as you wish for your own setup.
 
 ---
 
