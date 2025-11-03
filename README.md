@@ -92,7 +92,7 @@ Located in `multiple-native-desktop/`
 
 ### Prerequisites
 
-- Windows 10 (build 20348+) or Windows 11
+- Windows 10 (version 1809+) or Windows 11
 - [Komorebi](https://github.com/LGUG2Z/komorebi) - Tiling window manager
 - [YASB](https://github.com/amnweb/yasb) - Status bar
 - [AutoHotkey v2](https://www.autohotkey.com/) - For virtual desktop enhancements
@@ -315,7 +315,7 @@ This project is licensed under the MIT License - feel free to use and modify as 
 
 - [Komorebi](https://github.com/LGUG2Z/komorebi) - Tiling window manager for Windows
 - [YASB](https://github.com/amnweb/yasb) - Status bar application
-- [VD.ahk](https://github.com/FuPeiJiang/VD.ahk) - Virtual Desktop library
+- [VD.ahk](https://github.com/FuPeiJiang/VD.ahk) - Virtual Desktop library for AutoHotkey
 - The r/unixporn community for inspiration
 
 ---
