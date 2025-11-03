@@ -129,6 +129,10 @@ Located in `multiple-native-desktop/`
 
    **For Komorebi + YASB:**
    ```powershell
+   # Create config directories if they don't exist
+   New-Item -Path "$env:USERPROFILE\.config\komorebi" -ItemType Directory -Force
+   New-Item -Path "$env:USERPROFILE\.config\yasb" -ItemType Directory -Force
+   
    # Copy Komorebi config
    Copy-Item -Path ".\komorebi_yasb\komorebi\*" -Destination "$env:USERPROFILE\.config\komorebi\" -Recurse -Force
    
@@ -201,6 +205,9 @@ Edit `multiple-native-desktop/VDSwitch.ahk` to:
 | `Win + Alt + Left/Right` | Move window to adjacent desktop and follow |
 | `Alt + NumpadAdd` | Create new desktop and switch to it |
 | `Win + NumpadAdd` | Create new desktop (without switching) |
+| `Ctrl + Shift + NumpadAdd` | Create desktops until there are at least 3 |
+| `F1` | Display current desktop number (debug) |
+| `F6` | Display desktop number of active window (debug) |
 
 ### Application Launchers
 
@@ -315,7 +322,7 @@ This configuration is provided as-is. Feel free to use and modify as you wish fo
 
 - [Komorebi](https://github.com/LGUG2Z/komorebi) - Tiling window manager for Windows
 - [YASB](https://github.com/amnweb/yasb) - Status bar application
-- [VD.ahk](https://github.com/FuPeiJiang/VD.ahk) - Virtual Desktop library for AutoHotkey
+- [VD.ahk](https://github.com/FuPeiJiang/VD.ahk) - Virtual Desktop library for AutoHotkey (VD.ah2 in this repo)
 - The r/unixporn community for inspiration
 
 ---
