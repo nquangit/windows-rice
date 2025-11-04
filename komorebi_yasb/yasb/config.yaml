@@ -38,11 +38,52 @@ bars:
       bottom: 0
       right: 6
     widgets:
-      left: ["home", "komorebi_workspaces", "komorebi_active_layout", "apps"]
+      left:
+        [
+          "home",
+          "launchpad",
+          "komorebi_workspaces",
+          "komorebi_active_layout",
+          "apps",
+          "komorebi_control",
+        ]
       center: ["active_window"]
       right:
-        ["pomodoro", "volume", "vscode", "todo", "notifications", "power_menu"]
+        [
+          "pomodoro",
+          "github",
+          "volume",
+          "vscode",
+          "todo",
+          "notifications",
+          "power_menu",
+        ]
 widgets:
+  komorebi_control:
+    type: "komorebi.control.KomorebiControlWidget"
+    options:
+      label: "<span>\udb80\uddd9</span>"
+      icons:
+        start: "\uead3"
+        stop: "\uead7"
+        reload: "\uead2"
+      run_ahk: true
+      run_whkd: false
+      show_version: true
+      komorebi_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "left"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
   # win_button:
   #   type: "yasb.custom.CustomWidget"
   #   options:
@@ -232,6 +273,65 @@ widgets:
   #       thunderstormDay: ""
   #       thunderstormNight: ""
   #       default: ""
+  # media:
+  #   type: "yasb.media.MediaWidget"
+  #   options:
+  #     label: "{title} - {artist}"
+  #     label_alt: "{title}"
+  #     hide_empty: true
+  #     callbacks:
+  #       on_left: "toggle_label"
+  #       on_middle: "do_nothing"
+  #       on_right: "do_nothing"
+  #     max_field_size:
+  #       label: 20
+  #       label_alt: 30
+  #     show_thumbnail: true
+  #     controls_only: false
+  #     controls_left: true
+  #     controls_hide: false
+  #     thumbnail_alpha: 80
+  #     thumbnail_padding: 8
+  #     thumbnail_corner_radius: 16
+  #     icons:
+  #       prev_track: "\ue892"
+  #       next_track: "\ue893"
+  #       play: "\ue768"
+  #       pause: "\ue769"
+  #     media_menu:
+  #       blur: false
+  #       round_corners: true
+  #       round_corners_type: "normal"
+  #       border_color: "system"
+  #       alignment: "right"
+  #       direction: "down"
+  #       offset_top: 6
+  #       offset_left: 0
+  #       thumbnail_corner_radius: 8
+  #       thumbnail_size: 120
+  #       max_title_size: 60
+  #       max_artist_size: 20
+  #       show_source: true
+  #     media_menu_icons:
+  #       play: "\ue768"
+  #       pause: "\ue769"
+  #       prev_track: "\ue892"
+  #       next_track: "\ue893"
+  #     scrolling_label:
+  #       enabled: false
+  #       update_interval_ms: 33
+  #       style: "left"  # can be "left", "right", "bounce", "bounce-ease"
+  #       separator: " | "
+  #       label_padding: 1
+  #       # Easing curve params: https://www.desmos.com/calculator/j7eamemxzi
+  #       ease_slope: 20
+  #       ease_pos: 0.8
+  #       ease_min: 0.5
+  #     label_shadow:
+  #       enabled: true
+  #       color: "black"
+  #       radius: 3
+  #       offset: [ 1, 1 ]
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -425,3 +525,77 @@ widgets:
         on_left: "toggle_menu"
         on_middle: "do_nothing"
         on_right: "toggle_label"
+  github:
+    type: "yasb.github.GithubWidget"
+    options:
+      label: "<span>\ueba1</span>"
+      label_alt: "Notifications {data}" # {data} return number of unread notification
+      token: "<replace your token here>" # GitHub Personal access tokens (classic) https://github.com/settings/tokens
+      max_notification: 20 # Max number of notification displaying in menu max: 50
+      notification_dot:
+        enabled: True
+        corner: "bottom_left" # Can be "top_left", "top_right", "bottom_left", "bottom_right"
+        color: "red" # Can be hex color or string
+        margin: [1, 1] # x and y margin for the dot
+      only_unread: true # Show only unread or all notifications;
+      max_field_size: 54 # Max characters in title before truncation.
+      update_interval: 300 # Check for new notification in seconds
+      menu:
+        blur: True # Enable blur effect for the menu
+        round_corners: True # Enable round corners for the menu (this option is not supported on Windows 10)
+        round_corners_type: "normal" # Set the type of round corners for the menu (normal, small) (this option is not supported on Windows 10)
+        border_color: "System" # Set the border color for the menu (this option is not supported on Windows 10)
+        alignment: "right"
+        direction: "down"
+      label_shadow:
+        enabled: True
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+  launchpad:
+    type: "yasb.launchpad.LaunchpadWidget"
+    options:
+      label: "<span>\udb85\udcde</span>"
+      search_placeholder: "Search apps..."
+      app_icon_size: 48
+      window:
+        fullscreen: true
+        # width: 800
+        # height: 600
+        overlay_block: true
+      window_style:
+        enable_blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+      window_animation:
+        fade_in_duration: 200
+        fade_out_duration: 200
+      callbacks:
+        on_left: "toggle_launchpad"
+      app_title_shadow:
+        enabled: true
+        color: "#00000090"
+        offset: [1, 1]
+        radius: 2
+      app_icon_shadow:
+        enabled: true
+        color: "#00000090"
+        offset: [0, 2]
+        radius: 8
+  # cava:
+  #   type: "yasb.cava.CavaWidget"
+  #   options:
+  #     bar_height: 12
+  #     min_bar_height: 0
+  #     gradient: 1
+  #     foreground: "#89b4fa"
+  #     gradient_color_1: '#74c7ec'
+  #     gradient_color_2: '#89b4fa'
+  #     gradient_color_3: '#cba6f7'
+  #     bars_number: 8
+  #     bar_spacing: 2
+  #     bar_width: 4
+  #     bar_type: "bars"
+  #     framerate: 60
+  #     hide_empty: true

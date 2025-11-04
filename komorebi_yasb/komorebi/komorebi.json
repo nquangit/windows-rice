@@ -20,7 +20,7 @@
   "transparency": true,
   "transparency_alpha": 200,
   "animation": {
-    "enabled": false,
+    "enabled": true,
     "duration": 400,
     "fps": 120,
     "style": {
